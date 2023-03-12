@@ -1,6 +1,6 @@
-# Stop Watch -> Personal Project
+# Stop Watch (Personal Project)
 
-Tools Used
+- ### Tools Used
 
         - JavaScript
         - Bootstrap
