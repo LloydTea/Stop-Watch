@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Javascript Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body class="bg-info bg-opacity-25">
+    <div class="container">
+        <div class="row vh-100 justify-content-center align-items-center">
+            <div class="col-10 col-md-6 px-0">
+                <div class="main-box shadow pt-md-3 px-2 pb-5 p-md-5 text-white rounded-3">
+                    <p class="fs-3 pb-4">
+                        <span><i class="bi bi-list"></i></span>
+                        <span class="float-end"><i class="bi bi-x-lg"></i></span>
+                    </p>
+                    <p class="fs-5 mb-0 text-start text-uppercase">Timer</p>
+                    <p class="fs-2 text-start text-white text-capitalize">Personal project</p>
+                    <div class="row justify-content-center time-all-box rounded-3 pb-5 p-3 p-md-5 shadow text-dark bg-white text-center">
+                        <div class="col-5 col-md-3">
+                            <div class="">
+                                <p class="time-figure mb-0" id="hour">00</p>
+                                <span class="time-label opacity-50">Days</span>
+                            </div>
+                        </div>
+                        <div class="col-5 col-md-3">
+                            <div class="">
+                                <p class="time-figure mb-0" id="hour">00</p>
+                                <span class="time-label opacity-50">Hours</span>
+                            </div>
+                        </div>
+                        <div class="col-5 col-md-3">
+                            <div>
+                                <p class="time-figure mb-0" id="minutes">00</p>
+                                <span class="time-label opacity-50">Minutes</span>
+                            </div>
+                        </div>
+                        <div class="col-5 col-md-3">
+                            <div>
+                                <p class="time-figure mb-0" id="seconds">00</p>
+                                <span class="time-label opacity-50">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center timer-controller">
+                        <button id="start" class="btn background-blue-grad timer-btn text-white rounded-circle" type="button">
+                            <i class="bi bi-play" style="font-size: 2.5rem;"></i>
+                            <span class="timmer-btn-text">Start</span>
+                        </button>
+                        <button id="pause" class="btn background-blue-grad timer-btn text-white rounded-circle" type="button">
+                            <i id="pause_pay" class="bi bi-pause" style="font-size: 2.5rem;"></i>
+                            <span id="pause_text" class="timmer-btn-text">Pause</span>
+                        </button>
+                        <button id="reset" class="btn btn-danger timer-btn text-white rounded-circle" type="button">
+                            <i class="bi bi-arrow-clockwise" style="font-size: 2.5rem;"></i>
+                            <span class="timmer-btn-text">Reset</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

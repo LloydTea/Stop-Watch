@@ -1,0 +1,59 @@
+.time-box{
+    min-width: 120px;
+    max-height: 120px;
+    display: inline-block;
+}
+.time-label {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.main-box{
+    background-color: #04acc3;
+}
+.time-all-box{
+    margin-inline-start: -80px !important;
+    margin-inline-end: -80px !important;
+}
+
+.time-figure {
+    font-size: 60px;
+    font-weight: 200;
+}
+.timer-controller{
+    margin-top: -40px;
+}
+.timer-btn {
+    width: 85px !important;
+    height: 85px !important;
+    display: inline-block !important;
+    margin: auto 5px;
+    color: white !important;
+    border:0 !important;
+}
+.background-blue-grad{
+    background-image: linear-gradient(#00e1ff, #075895) !important;
+}
+.background-blue-grad:hover{
+    background-image: radial-gradient(#00e1ff, #075895) !important;
+}
+
+.timmer-btn-text{
+    margin-top: -10px !important;
+    display: block;
+    font-size: .8rem !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .time-all-box{
+        margin-inline-start: -30px !important;
+        margin-inline-end: -30px !important;
+    }
+    .timer-controller{
+        margin-top: -30px;
+    }
+    .time-figure {
+        font-size: 40px;
+        font-weight: 200;
+    }
+}
