@@ -2,6 +2,7 @@
 var secs = 0;
 var mins = 0;
 var hrs = 0;
+var days = 0;
 //Timer Controller
 let timerOn = false;
 
@@ -10,6 +11,7 @@ let timerOn = false;
 var second = document.getElementById("seconds");
 var minute = document.getElementById("minutes");
 var hour = document.getElementById("hour");
+var day = document.getElementById("day");
 
 //TimerVariable
 var watch;
@@ -23,25 +25,26 @@ var pauseText = document.getElementById("pause_text");
 
 const startWatch = () => {
   secs += 1;
-  if (secs < 12) {
-    if (secs < 10) {
-      second.innerHTML = "0" + secs;
-    } else {
-      second.innerHTML = secs;
-    }
+  if (secs < 6) {
+    second.innerHTML = minTwoDigits(secs);
   } else {
     secs = 0;
     mins += 1;
-    if (mins < 12) {
-      if (mins < 10) {
-        minute.innerHTML = "0" + mins;
-      } else {
-        minute.innerHTML = mins;
-      }
+    if (mins < 6) {
+      minute.innerHTML = minTwoDigits(mins);
+      second.innerHTML = minTwoDigits(secs);
     } else {
       mins = 00;
       hrs += 1;
-      hour.innerHTML = hrs;
+      if (hrs < 6) {
+        hour.innerHTML = minTwoDigits(hrs);
+        minute.innerHTML = minTwoDigits(0);
+      } else {
+        hrs = 0;
+        days += 1;
+        hour.innerHTML = minTwoDigits(0);
+        day.innerHTML = minTwoDigits(days);
+      }
     }
   }
 };
@@ -89,6 +92,10 @@ const resetTimer = () => {
   pauseWatchBtn.classList.add("d-none");
   resetWatchBtn.classList.add("d-none");
 };
+
+function minTwoDigits(n) {
+  return (n < 10 ? "0" : "") + n;
+}
 
 startWatchBtn.addEventListener("click", startTimer);
 pauseWatchBtn.disabled = true;
