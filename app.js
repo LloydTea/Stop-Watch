@@ -23,6 +23,7 @@ var resetWatchBtn = document.getElementById("reset");
 var pausePlayIcon = document.getElementById("pause_pay");
 var pauseText = document.getElementById("pause_text");
 
+//Main Stop Watch Function.
 const startWatch = () => {
   secs += 1;
   if (secs < 6) {
@@ -49,17 +50,19 @@ const startWatch = () => {
   }
 };
 
+//Timer Initiator Function
 const startTimer = () => {
   timerOn = true;
   watch = setInterval(startWatch, 1000);
-  startWatchBtn.disabled = true;
   startWatchBtn.classList.add("d-none");
   pauseWatchBtn.classList.remove("d-none");
   resetWatchBtn.classList.remove("d-none");
   resetWatchBtn.disabled = false;
   pauseWatchBtn.disabled = false;
+  startWatchBtn.disabled = true;
 };
 
+//Timer Pause And Resume Function
 const pauseTimer = () => {
   if (timerOn) {
     timerOn = false;
@@ -77,6 +80,7 @@ const pauseTimer = () => {
   }
 };
 
+//Timer Resetter
 const resetTimer = () => {
   secs = 0;
   mins = 0;
@@ -93,6 +97,7 @@ const resetTimer = () => {
   resetWatchBtn.classList.add("d-none");
 };
 
+//Number Formatter To Two Digits
 function minTwoDigits(n) {
   return (n < 10 ? "0" : "") + n;
 }
