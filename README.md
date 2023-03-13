@@ -17,6 +17,9 @@
 
   Call that function three times, passing in different roman values each time.
 
+- ### Screenshot
+  [![Timer Screenshot](https://github.com/LloydTea/Stop-Watch/blob/62a1cc085e68aa4c358dc2cd7f7701191b8d08ec/Timer.jpg)]
+
 ## Authors
 
 - [@LloydTea](https://github.com/LloydTea)
