@@ -95,6 +95,11 @@ const resetTimer = () => {
   startWatchBtn.classList.remove("d-none");
   pauseWatchBtn.classList.add("d-none");
   resetWatchBtn.classList.add("d-none");
+  if (pauseText.innerHTML != "Pause") {
+    pausePlayIcon.classList.add("bi-pause");
+    pausePlayIcon.classList.remove("bi-play");
+    pauseText.innerHTML = "Pause";
+  }
 };
 
 //Number Formatter To Two Digits
